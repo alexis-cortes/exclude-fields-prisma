@@ -1,4 +1,4 @@
-# Exclude fields - Prisma
+# Prisma - Exclude fields
 
 ## _Alternative code solution to exclude fields in a prisma query_
 
@@ -8,7 +8,7 @@ This code is an example of a possible solution to be able to exclude fields in a
 
 Call the exclude function and send as parameters a string with the model name and an array with the fields to exclude.
 
-```
+```javascript
 await prisma.user.findMany({
     select: {
       ...exclude("user", ["password", "otherField"]),
